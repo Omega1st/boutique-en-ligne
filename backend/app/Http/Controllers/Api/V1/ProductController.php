@@ -1,0 +1,2 @@
+<?php
+namespace App\Http\Controllers\Api\V1;use App\Http\Controllers\Controller;use App\Models\Product;use Illuminate\Http\Request;class ProductController extends Controller{public function index(Request $r){$q=Product::with('category:id,name')->where('is_active',true)->when($r->search,fn($x,$s)=>$x->where('name','like',"%$s%"))->when($r->category_id,fn($x,$id)=>$x->where('category_id',$id))->latest()->paginate(12);return response()->json($q);}public function show(Product $product){abort_unless($product->is_active,404);return ['data'=>$product->load('category:id,name')];}}

@@ -1,0 +1,12 @@
+# Matrice de conformité synthétique
+- PROD-01 à PROD-03 : catalogue, recherche, filtre, détail, image, prix, stock.
+- PROD-04 : CRUD administrateur avec validation serveur.
+- PROD-05 : quantités bornées côté interface et verrouillage transactionnel côté API.
+- USR-01 à USR-02 : inscription, connexion, déconnexion, Sanctum.
+- USR-03 à USR-05 : liste admin, activation, révocation des tokens, middleware 401/403.
+- ACH-01 à ACH-02 : ajout, quantité, suppression et recalcul immédiat.
+- ACH-03 : commande et lignes, snapshots, total serveur, décrément de stock.
+- ACH-04 : historique limité au propriétaire.
+- ACH-05 : statuts administrables.
+- UI : palette imposée, focus visible, labels, responsive 360 px, états vide/erreur.
+- Hors périmètre : paiement bancaire, livraison, coupons, avis, multi-boutiques.
